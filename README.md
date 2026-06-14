@@ -3,28 +3,16 @@ This repository stores my configuration files for Unix-like systems.
 
 # Installation and Usage
 
-*If you are installing from a fresh copy of Fedora Sway*:
+**Quick Start**: in wherever you keep your repos (mine is at `~/software/`),
+run the following command:
+
 ```sh
-curl -fsSL "https://raw.githubusercontent.com/henryZheng727/dotfiles/refs/heads/main/fedora_sway_setup.sh" | sh
+git clone --recursive https://github.com/mt-env/dotfiles && cd dotfiles && ./install.sh
 ```
 
-The best way to manage these files is with [GNU Stow](https://www.gnu.org/software/stow/).
-**Install GNU Stow using your system's package manager of choice.**
-My file organization mimics that found in [this video](https://youtu.be/y6XCebnB9gs).
-
-Then **clone this git repository** and change directories into it.
-```sh
-git clone https://github.com/henryZheng727/dotfiles.git
-cd dotfiles
-```
-
-**Once you are in this repository**, you can use GNU Stow to install configuration files.
-Each directory stores all the configuration files you'd need for that program.
-For example, to install configuration files for Neovim, you'd type:
-```sh
-stow -t ~ nvim
-```
-
-You can type any number of directory names at the end of the command.
-
-
+These dotfiles are set up such that it should be possible to simply copy the
+entire repo into `~/.config/` without any worries. The install script
+specifically should be agnostic to where you cloned the repo, and hopefully
+should work no matter where it's run from. If you're on the newest versions of
+all the software, these dotfiles should work. If you're on older versions, it
+may not. Open an issue if anything breaks!
