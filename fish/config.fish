@@ -20,6 +20,12 @@ if status is-interactive
     abbr cade 'ssh u1340759@lab1-20.eng.utah.edu'
 end
 
+if type -q cargo-mommy
+    abbr cargo 'cargo mommy'
+    set -gx CARGO_MOMMYS_LITTLE 'girl/boy/puppy/kitty'
+    set -gx CARGO_MOMMYS_ROLES 'mommy/owner'
+    set -gx CARGO_MOMMYS_MOODS 'chill/ominous/thirsty/yikes'
+end
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
